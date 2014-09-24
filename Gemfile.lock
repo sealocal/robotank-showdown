@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    gosu (0.7.50)
+    gosu (0.8.4)
     rrobots (0.0.1)
       gosu
 
@@ -9,4 +9,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gosu (>= 0.8)
   rrobots
