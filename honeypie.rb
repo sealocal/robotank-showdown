@@ -21,12 +21,12 @@ class Honeypie
       turn_gun 1 if gun_heading != 180
     end
 
-    fire 1
-    fire 1
-    fire 1
-    fire 1
-    fire 1
-    fire 1
+    fire 0.1
+    fire 0.1
+    fire 0.1
+    fire 0.1
+    fire 0.1
+    fire 0.1
 
     if heading == 90 && @direction == :up
         accelerate 1
