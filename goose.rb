@@ -1,6 +1,6 @@
 require 'rrobots'
 
-class Duck
+class Goose
   include Robot
 
   def tick events
