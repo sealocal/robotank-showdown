@@ -1,0 +1,1816 @@
+/Users/andrewsinner/.rubies/ruby-2.1.2/bin/ruby extconf.rb 
+The Gosu gem requires some libraries to be installed system-wide.
+See the following site for a list:
+https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
+
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling analysis.c
+compiling bitrate.c
+In file included from bitrate.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/bitrate.c:37:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int  halfsamples=ci->blocksizes[0]>>1;
+         ~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/bitrate.c:87:37: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int  samples=ci->blocksizes[vb->W]>>1;
+       ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~^~~
+2 warnings generated.
+compiling bitwise.c
+In file included from bitwise.c:1:
+./../GosuImpl/../dependencies/libogg/src/bitwise.c:65:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    b->endbit=bits;
+             ~^~~~
+./../GosuImpl/../dependencies/libogg/src/bitwise.c:76:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    b->endbit=bits;
+             ~^~~~
+./../GosuImpl/../dependencies/libogg/src/bitwise.c:218:49: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      w(b,(unsigned long)(ptr[bytes]>>(8-bits)),bits);    
+      ~                                         ^~~~
+./../GosuImpl/../dependencies/libogg/src/bitwise.c:220:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      w(b,(unsigned long)(ptr[bytes]),bits);    
+      ~                               ^~~~
+4 warnings generated.
+compiling block.c
+In file included from block.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:203:49: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  mdct_init(b->transform[0][0],ci->blocksizes[0]>>hs);
+  ~~~~~~~~~                    ~~~~~~~~~~~~~~~~~^~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:204:49: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  mdct_init(b->transform[1][0],ci->blocksizes[1]>>hs);
+  ~~~~~~~~~                    ~~~~~~~~~~~~~~~~~^~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:207:22: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+  b->window[0]=ilog2(ci->blocksizes[0])-6;
+               ~~~~~ ^~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:208:22: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+  b->window[1]=ilog2(ci->blocksizes[1])-6;
+               ~~~~~ ^~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:213:31: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    drft_init(&b->fft_look[0],ci->blocksizes[0]);
+    ~~~~~~~~~                 ^~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:214:31: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    drft_init(&b->fft_look[1],ci->blocksizes[1]);
+    ~~~~~~~~~                 ^~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:228:63: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                   ci->blocksizes[ci->psy_param[i]->blockflag]/2,
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:251:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  v->pcm_storage=ci->blocksizes[1];
+                ~^~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:268:21: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  v->pcm_current=v->centerW;
+                ~~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:431:51: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      vorbis_lpc_from_data(work,lpc,v->pcm_current-v->centerW,order);
+      ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~^~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:479:47: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    vorbis_analysis_buffer(v,ci->blocksizes[1]*3);
+    ~~~~~~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:491:57: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        vorbis_lpc_from_data(v->pcm[i]+v->eofflag-n,lpc,n,order);
+        ~~~~~~~~~~~~~~~~~~~~                            ^
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:610:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  vb->pcmend=ci->blocksizes[v->W];
+            ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:649:41: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int new_centerNext=ci->blocksizes[1]/2;
+        ~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:650:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int movementW=centerNext-new_centerNext;
+        ~~~~~~~~~ ~~~~~~~~~~^~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:697:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  v->pcm_current=v->centerW>>hs;
+                ~~~~~~~~~~~^~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:745:31: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int n=ci->blocksizes[v->W]>>(hs+1);
+        ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:746:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int n0=ci->blocksizes[0]>>(hs+1);
+        ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:747:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int n1=ci->blocksizes[1]>>(hs+1);
+        ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:830:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      v->pcm_current=prevCenter+
+                    ~~~~~~~~~~~^
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:968:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=ci->blocksizes[v->W]>>(hs+1);
+      ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:969:27: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n0=ci->blocksizes[0]>>(hs+1);
+      ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/block.c:970:27: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n1=ci->blocksizes[1]>>(hs+1);
+      ~~ ~~~~~~~~~~~~~~~~~^~~~~~~~
+23 warnings generated.
+compiling codebook.c
+In file included from codebook.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:60:53: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+          oggpack_write(opb,i-count,_ilog(c->entries-count));
+                                    ~~~~~ ~~~~~~~~~~^~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:65:47: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    oggpack_write(opb,i-count,_ilog(c->entries-count));
+                              ~~~~~ ~~~~~~~~~~^~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:123:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        quantvals=_book_maptype1_quantvals(c);
+                 ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:127:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        quantvals=c->entries*c->dim;
+                 ~~~~~~~~~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:162:15: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+  if(_ilog(s->dim)+_ilog(s->entries)>24)goto _eofout;
+     ~~~~~ ~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:162:29: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+  if(_ilog(s->dim)+_ilog(s->entries)>24)goto _eofout;
+                   ~~~~~ ~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:206:51: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        long num=oggpack_read(opb,_ilog(s->entries-i));
+                                  ~~~~~ ~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:225:22: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  switch((s->maptype=oggpack_read(opb,4))){
+                    ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:235:35: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    s->q_quant=oggpack_read(opb,4)+1;
+              ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:236:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    s->q_sequencep=oggpack_read(opb,1);
+                  ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:243:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        quantvals=(s->dim==0?0:_book_maptype1_quantvals(s));
+                 ~             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:246:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        quantvals=s->entries*s->dim;
+                 ~~~~~~~~~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:276:37: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  oggpack_write(b,book->codelist[a],book->c->lengthlist[a]);
+  ~~~~~~~~~~~~~                     ^~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:277:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return(book->c->lengthlist[a]);
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:396:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        entry = decode_packed_entry_number(book,b);
+              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:404:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        entry = decode_packed_entry_number(book,b);
+              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/codebook.c:440:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      entry = decode_packed_entry_number(book,b);
+            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+17 warnings generated.
+compiling envelope.c
+In file included from envelope.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/envelope.c:223:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int first=ve->current/ve->searchstep;
+      ~~~~~ ~~~~~~~~~~~^~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/envelope.c:357:41: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int smallsize=e->current/e->searchstep+VE_POST; /* adjust for placing marks
+      ~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/envelope.c:359:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int smallshift=shift/e->searchstep;
+      ~~~~~~~~~~ ~~~~~^~~~~~~~~~~~~~
+3 warnings generated.
+compiling floor0.c
+In file included from floor0.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:79:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->order=oggpack_read(opb,8);
+             ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:82:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->ampbits=oggpack_read(opb,6);
+               ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:83:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->ampdB=oggpack_read(opb,8);
+             ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:84:37: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->numbooks=oggpack_read(opb,4)+1;
+                ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:92:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->books[j]=oggpack_read(opb,8);
+                  ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:120:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int W=vb->W;
+        ~ ~~~~^
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:121:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int n=ci->blocksizes[W]/2,j;
+        ~ ~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:151:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  look->ln=info->barkmap;
+          ~~~~~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:164:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int ampraw=oggpack_read(&vb->opb,info->ampbits);
+      ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:168:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int booknum=oggpack_read(&vb->opb,_ilog(info->numbooks));
+        ~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor0.c:181:56: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        if(vorbis_book_decodev_set(b,lsp+j,&vb->opb,b->dim)==-1)goto eop;
+           ~~~~~~~~~~~~~~~~~~~~~~~                  ~~~^~~
+11 warnings generated.
+compiling floor1.c
+In file included from floor1.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:140:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->partitions=oggpack_read(opb,5); /* only 0 to 31 legal */
+                  ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:142:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->partitionclass[j]=oggpack_read(opb,4); /* only 0 to 15 legal */
+                           ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:149:43: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->class_dim[j]=oggpack_read(opb,3)+1; /* 1 to 8 */
+                      ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:150:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->class_subs[j]=oggpack_read(opb,2); /* 0,1,2,3 bits */
+                       ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:153:48: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    if(info->class_subs[j])info->class_book[j]=oggpack_read(opb,8);
+                                              ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:157:52: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      info->class_subbook[j][k]=oggpack_read(opb,8)-1;
+                               ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:164:33: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->mult=oggpack_read(opb,2)+1;     /* only 1,2,3,4 legal now */
+            ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:165:13: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  rangebits=oggpack_read(opb,4);
+           ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:171:33: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int t=info->postlist[k+2]=oggpack_read(opb,rangebits);
+                               ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:224:56: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  for(i=0;i<n;i++)look->forward_index[i]=sortpointer[i]-info->postlist;
+                                        ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:617:47: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    nonzero+=accumulate_fit(logmask,logmdct,0,n,fits,n,info);
+             ~~~~~~~~~~~~~~                   ^
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:617:54: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    nonzero+=accumulate_fit(logmask,logmdct,0,n,fits,n,info);
+             ~~~~~~~~~~~~~~                          ^
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:622:31: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                              n,info);
+                              ^
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:629:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    fit_line(fits,posts-1,&y0,&y1,info);
+    ~~~~~~~~      ~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:697:35: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                    hineighbor[j]=i;
+                                 ~^
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:702:35: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                    loneighbor[j]=i;
+                                 ~^
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:732:43: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int vx=post_Y(fit_valueA,fit_valueB,i);
+             ~~~~~~                       ^
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:878:62: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+            maxval[k]=sbooks[info->class_subbook[class][k]]->entries;
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:942:34: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int n=ci->blocksizes[vb->W]/2;
+          ~ ~~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:980:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    fit_value[0]=oggpack_read(&vb->opb,ilog(look->quant_q-1));
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:981:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    fit_value[1]=oggpack_read(&vb->opb,ilog(look->quant_q-1));
+                ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:993:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        cval=vorbis_book_decode(books+info->class_book[class],&vb->opb);
+            ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:1002:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+          if((fit_value[j+k]=vorbis_book_decode(books+book,&vb->opb))==-1)
+                            ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/floor1.c:1060:47: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int                  n=ci->blocksizes[vb->W]/2;
+                       ~ ~~~~~~~~~~~~~~~~~~~~~^~
+24 warnings generated.
+compiling framing.c
+In file included from framing.c:1:
+./../GosuImpl/../dependencies/libogg/src/framing.c:375:44: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int maxvals=(os->lacing_fill>255?255:os->lacing_fill);
+      ~~~~~~~                          ~~~~^~~~~~~~~~~
+./../GosuImpl/../dependencies/libogg/src/framing.c:627:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    oy->storage=newsize;
+               ~^~~~~~~
+./../GosuImpl/../dependencies/libogg/src/framing.c:837:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    for(i=os->lacing_packet;i<os->lacing_fill;i++)
+         ~~~~~^~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libogg/src/framing.c:867:27: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    if(_os_body_expand(os,bodysize)) return -1;
+       ~~~~~~~~~~~~~~~    ^~~~~~~~
+./../GosuImpl/../dependencies/libogg/src/framing.c:884:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      if(val<255)saved=os->lacing_fill;
+                      ~~~~~^~~~~~~~~~~
+./../GosuImpl/../dependencies/libogg/src/framing.c:956:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int ptr=os->lacing_returned;
+      ~~~ ~~~~^~~~~~~~~~~~~~~
+6 warnings generated.
+compiling info.c
+In file included from info.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:70:37: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+  vc->comment_lengths[vc->comments]=strlen(comment);
+                                   ~^~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:100:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+  int taglen = strlen(tag)+1; /* +1 for the = we append */
+      ~~~~~~   ~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:120:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+  int taglen = strlen(tag)+1; /* +1 for the = we append */
+      ~~~~~~   ~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:151:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return ci ? ci->blocksizes[zo] : -1;
+  ~~~~~~      ^~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:213:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  vi->version=oggpack_read(opb,32);
+             ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:216:16: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  vi->channels=oggpack_read(opb,8);
+              ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:242:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int vendorlen=oggpack_read(opb,32);
+      ~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:247:5: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  i=oggpack_read(opb,32);
+   ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:255:13: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int len=oggpack_read(opb,32);
+        ~~~ ^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:278:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  ci->books=oggpack_read(opb,8)+1;
+           ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:287:34: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int times=oggpack_read(opb,6)+1;
+        ~~~~~ ~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:290:16: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int test=oggpack_read(opb,16);
+          ~~~~ ^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:296:33: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  ci->floors=oggpack_read(opb,6)+1;
+            ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:299:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->floor_type[i]=oggpack_read(opb,16);
+                     ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:306:35: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  ci->residues=oggpack_read(opb,6)+1;
+              ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:309:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->residue_type[i]=oggpack_read(opb,16);
+                       ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:316:31: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  ci->maps=oggpack_read(opb,6)+1;
+          ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:319:21: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->map_type[i]=oggpack_read(opb,16);
+                   ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:326:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  ci->modes=oggpack_read(opb,6)+1;
+           ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:330:34: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->mode_param[i]->blockflag=oggpack_read(opb,1);
+                                ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:331:35: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->mode_param[i]->windowtype=oggpack_read(opb,16);
+                                 ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:332:38: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->mode_param[i]->transformtype=oggpack_read(opb,16);
+                                    ~^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:333:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ci->mode_param[i]->mapping=oggpack_read(opb,8);
+                              ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:355:42: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    oggpack_readinit(&opb,op->packet,op->bytes);
+    ~~~~~~~~~~~~~~~~                 ~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:383:42: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    oggpack_readinit(&opb,op->packet,op->bytes);
+    ~~~~~~~~~~~~~~~~                 ~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:389:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int packtype=oggpack_read(&opb,8);
+          ~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:454:27: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+  oggpack_write(opb,ilog2(ci->blocksizes[0]),4);
+                    ~~~~~ ^~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/info.c:455:27: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+  oggpack_write(opb,ilog2(ci->blocksizes[1]),4);
+                    ~~~~~ ^~~~~~~~~~~~~~~~~
+28 warnings generated.
+compiling lookup.c
+compiling lpc.c
+compiling lsp.c
+compiling mapping0.c
+In file included from mapping0.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:108:5: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  b=oggpack_read(opb,1);
+   ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:111:38: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->submaps=oggpack_read(opb,4)+1;
+                 ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:116:5: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  b=oggpack_read(opb,1);
+   ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:119:45: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->coupling_steps=oggpack_read(opb,8)+1;
+                        ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:122:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int testM=info->coupling_mag[i]=oggpack_read(opb,ilog(vi->channels));
+                                     ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:123:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int testA=info->coupling_ang[i]=oggpack_read(opb,ilog(vi->channels));
+                                     ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:138:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      info->chmuxlist[i]=oggpack_read(opb,4);
+                        ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:144:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->floorsubmap[i]=oggpack_read(opb,8);
+                        ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:146:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    info->residuesubmap[i]=oggpack_read(opb,8);
+                          ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:256:22: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int modenumber=vb->W;
+      ~~~~~~~~~~ ~~~~^
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:299:59: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    _vorbis_apply_window(pcm,b->window,ci->blocksizes,vb->lW,vb->W,vb->nW);
+    ~~~~~~~~~~~~~~~~~~~~                              ~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:299:66: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    _vorbis_apply_window(pcm,b->window,ci->blocksizes,vb->lW,vb->W,vb->nW);
+    ~~~~~~~~~~~~~~~~~~~~                                     ~~~~^
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:299:72: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    _vorbis_apply_window(pcm,b->window,ci->blocksizes,vb->lW,vb->W,vb->nW);
+    ~~~~~~~~~~~~~~~~~~~~                                           ~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/mapping0.c:714:38: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  long                  n=vb->pcmend=ci->blocksizes[vb->W];
+                                    ~^~~~~~~~~~~~~~~~~~~~~
+14 warnings generated.
+compiling mdct.c
+compiling psy.c
+In file included from psy.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:278:41: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  p->total_octave_lines=maxoc-p->firstoc+1;
+                       ~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:443:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                 p->octave[i]-p->firstoc,
+                 ~~~~~~~~~~~~^~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:605:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    lo = b[i] >> 16;
+       ~ ~~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:627:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    lo = b[i] >> 16;
+       ~ ~~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:835:30: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=ci->blocksizes[vd->W]/2;
+      ~ ~~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:990:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int k=sort[j]-q;
+          ~ ~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:1164:17: warning: '/*' within block comment [-Wcomment]
+                /* elliptical 
+                ^
+./../GosuImpl/../dependencies/libvorbis/lib/psy.c:1023:9: warning: unused variable 'de' [-Wunused-variable]
+  float de=0.1*p->m_val; /* a blend of the AoTuV M2 and M3 code here and below */
+        ^
+8 warnings generated.
+compiling registry.c
+compiling res0.c
+In file included from res0.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:211:38: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->grouping=oggpack_read(opb,24)+1;
+                ~~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:212:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->partitions=oggpack_read(opb,6)+1;
+                  ~~~~~~~~~~~~~~~~~~~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:213:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  info->groupbook=oggpack_read(opb,8);
+                 ~^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:219:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int cascade=oggpack_read(opb,3);
+        ~~~~~~~ ^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:220:15: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int cflag=oggpack_read(opb,1);
+        ~~~~~ ^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:223:13: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int c=oggpack_read(opb,5);
+          ~ ^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:232:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int book=oggpack_read(opb,8);
+        ~~~~ ^~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:250:52: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int entries = ci->book_param[info->groupbook]->entries;
+        ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:251:48: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int dim = ci->book_param[info->groupbook]->dim;
+        ~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:282:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  dim=look->phrasebook->dim;
+     ~~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:316:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      look->decodemap[j][k]=deco;
+                           ~^~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:330:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int dim=book->dim;
+      ~~~ ~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:396:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int dim=book->dim;
+      ~~~ ~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:423:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=info->end-info->begin;
+      ~ ~~~~~~~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:439:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    int offset=i*samples_per_partition+info->begin;
+        ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:490:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=info->end-info->begin;
+      ~ ~~~~~~~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:554:45: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int partitions_per_word=look->phrasebook->dim;
+      ~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:555:18: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=info->end-info->begin;
+      ~ ~~~~~~~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:593:67: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+            look->phrasebits+=vorbis_book_encode(look->phrasebook,val,opb);
+                              ~~~~~~~~~~~~~~~~~~                  ^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:668:45: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int partitions_per_word=look->phrasebook->dim;
+      ~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:670:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int end=(info->end<max?info->end:max);
+      ~~~                ~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:671:12: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=end-info->begin;
+      ~ ~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:689:22: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+            int temp=vorbis_book_decode(look->phrasebook,&vb->opb);
+                ~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:813:45: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int partitions_per_word=look->phrasebook->dim;
+      ~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:815:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int end=(info->end<max?info->end:max);
+      ~~~                ~~~~~~^~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:816:12: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int n=end-info->begin;
+      ~ ~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/res0.c:831:20: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+          int temp=vorbis_book_decode(look->phrasebook,&vb->opb);
+              ~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+27 warnings generated.
+compiling sharedbook.c
+In file included from sharedbook.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:56:34: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  mant=rint(ldexp(val,(VQ_FMAN-1)-exp));
+            ~~~~~     ~~~~~~~~~~~^~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:67:36: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  return(ldexp(mant,exp-(VQ_FMAN-1)-VQ_FEXP_BIAS));
+         ~~~~~      ~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:215:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      quantvals=_book_maptype1_quantvals(b);
+               ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:292:16: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  c->quantvals=_book_maptype1_quantvals(s);
+              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:356:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      int position=codep[i]-codes;
+          ~~~~~~~~ ~~~~~~~~^~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:377:33: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    c->dec_firsttablen=_ilog(c->used_entries)-4; /* this is magic */
+                       ~~~~~ ~~~^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:398:37: warning: implicit conversion loses integer precision: 'unsigned long' to 'ogg_uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+      ogg_uint32_t mask=0xfffffffeUL<<(31-c->dec_firsttablen);
+                   ~~~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/sharedbook.c:417:42: warning: implicit conversion loses integer precision: 'unsigned long' to 'ogg_uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+              0x80000000UL | (loval<<15) | hival;
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+8 warnings generated.
+compiling smallft.c
+compiling synthesis.c
+In file included from synthesis.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:40:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  oggpack_readinit(opb,op->packet,op->bytes);
+  ~~~~~~~~~~~~~~~~                ~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:49:8: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  mode=oggpack_read(opb,b->modebits);
+      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:77:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  vb->eofflag=op->e_o_s;
+             ~~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:80:14: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  vb->pcmend=ci->blocksizes[vb->W];
+            ~^~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:104:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  oggpack_readinit(opb,op->packet,op->bytes);
+  ~~~~~~~~~~~~~~~~                ~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:113:8: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  mode=oggpack_read(opb,b->modebits);
+      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:134:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  vb->eofflag=op->e_o_s;
+             ~~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:148:40: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  oggpack_readinit(&opb,op->packet,op->bytes);
+  ~~~~~~~~~~~~~~~~                 ~~~~^~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/synthesis.c:165:10: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    mode=oggpack_read(&opb,modebits);
+        ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+9 warnings generated.
+compiling vorbisfile.c
+In file included from vorbisfile.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:273:15: warning: implicit conversion loses integer precision: 'ogg_int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+  *serialno = ret_serialno;
+            ~ ^~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:426:33: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int         serialno = vf->os.serialno;
+              ~~~~~~~~   ~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:482:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int serialno = vf->os.serialno;
+      ~~~~~~~~   ~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:503:16: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    vf->links=m+1;
+             ~~^~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:539:23: warning: implicit conversion loses integer precision: 'ogg_int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+        if(ret)return(ret);
+               ~~~~~~ ^~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:566:21: warning: implicit conversion loses integer precision: 'ogg_int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+      if(ret)return(ret);
+             ~~~~~~ ^~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:570:19: warning: implicit conversion loses integer precision: 'ogg_int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    if(ret)return(ret);
+           ~~~~~~ ^~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:571:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    serialno = vf->os.serialno;
+             ~ ~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:580:19: warning: implicit conversion loses integer precision: 'ogg_int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    if(ret)return(ret);
+           ~~~~~~ ^~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:618:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int endserial=vf->os.serialno;
+      ~~~~~~~~~ ~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:619:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  int serialno=vf->os.serialno;
+      ~~~~~~~~ ~~~~~~~^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:641:48: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+  end=_get_prev_page_serial(vf,vf->serialnos+2,vf->serialnos[1],&endserial,&endgran);
+      ~~~~~~~~~~~~~~~~~~~~~                    ^~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:642:19: warning: implicit conversion loses integer precision: 'ogg_int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+  if(end<0)return(end);
+           ~~~~~~ ^~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:646:47: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                              vf->serialnos+2,vf->serialnos[1],0)<0)return(OV_EREAD);
+                                              ^~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:848:49: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+          ogg_stream_reset_serialno(&vf->os,vf->current_serialno);
+          ~~~~~~~~~~~~~~~~~~~~~~~~~         ~~~~^~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1251:33: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                            vf->current_serialno); /* must set serialno */
+                            ~~~~^~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1282:34: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    ogg_stream_init(&work_os,vf->current_serialno); /* get the memory ready */
+    ~~~~~~~~~~~~~~~          ~~~~^~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1295:23: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+            thisblock=vorbis_packet_blocksize(vf->vi+vf->current_link,&op);
+                     ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1372:43: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        ogg_stream_reset_serialno(&vf->os,serialno);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~         ^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1373:44: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        ogg_stream_reset_serialno(&work_os,serialno);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~          ^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1530:45: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      ogg_stream_reset_serialno(&vf->os,vf->current_serialno);
+      ~~~~~~~~~~~~~~~~~~~~~~~~~         ~~~~^~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1605:17: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      thisblock=vorbis_packet_blocksize(vf->vi+vf->current_link,&op);
+               ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1654:43: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        ogg_stream_reset_serialno(&vf->os,serialno);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~         ^~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1677:37: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      vorbis_synthesis_read(&vf->vd,samples);
+      ~~~~~~~~~~~~~~~~~~~~~         ^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:1997:35: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    vorbis_synthesis_read(&vf->vd,samples);
+    ~~~~~~~~~~~~~~~~~~~~~         ^~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/vorbisfile.c:2039:39: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        vorbis_synthesis_read(&vf->vd,samples);
+        ~~~~~~~~~~~~~~~~~~~~~         ^~~~~~~
+26 warnings generated.
+compiling window.c
+In file included from window.c:1:
+./../GosuImpl/../dependencies/libvorbis/lib/window.c:2129:11: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    for(i=rightbegin,p=rn/2-1;i<rightend;i++,p--)
+         ~^~~~~~~~~~
+./../GosuImpl/../dependencies/libvorbis/lib/window.c:2129:28: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    for(i=rightbegin,p=rn/2-1;i<rightend;i++,p--)
+                      ~~~~~^~
+2 warnings generated.
+compiling RubyGosu_wrap.cxx
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:666:7: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+      register size_t l = 0;
+      ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:667:7: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+      register size_t r = iter->size - 1;
+      ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:670:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register size_t i = (l + r) >> 1;
+        ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:673:4: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+          register int compare = strcmp(name, iname);
+          ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:717:7: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+      register size_t i = 0;
+      ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:736:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+  register const unsigned char *u = (unsigned char *) ptr;
+  ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:737:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+  register const unsigned char *eu =  u + sz;
+  ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:739:5: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+    register unsigned char uu = *u;
+    ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:751:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+  register unsigned char *u = (unsigned char *) ptr;
+  ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:752:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+  register const unsigned char *eu = u + sz;
+  ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:754:5: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+    register char d = *(c++);
+    ^~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:755:5: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+    register unsigned char uu;
+    ^~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+In file included from ./../GosuImpl/RubyGosu_wrap.cxx:2216:
+In file included from ../Gosu/Gosu.hpp:19:
+../Gosu/Image.hpp:100:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+../Gosu/Image.hpp:117:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:2323:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        unsigned width = NUM2ULONG(rb_funcall(val, rb_intern("columns"), 0));
+                 ~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:2324:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        unsigned height = NUM2ULONG(rb_funcall(val, rb_intern("rows"), 0));
+                 ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:2428:9: warning: unused variable 'type' [-Wunused-variable]
+  VALUE type = TYPE(obj);
+        ^
+./../GosuImpl/RubyGosu_wrap.cxx:2553:41: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+            return *self == Gosu::Color(NUM2ULONG(other));
+                            ~~~~        ^~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:2836:13: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+            m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            {                                                                   }
+./../GosuImpl/RubyGosu_wrap.cxx:3864:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:3867:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:3870:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:3917:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:3920:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:3923:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:3926:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg4 = Gosu::clamp<int>(NUM2ULONG(argv[3]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4086:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4253:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4284:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4315:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4346:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4688:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4691:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4694:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4723:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4726:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4729:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4732:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg4 = Gosu::clamp<int>(NUM2ULONG(argv[3]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4845:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4848:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4851:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:4854:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg4 = Gosu::clamp<int>(NUM2ULONG(argv[3]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:5292:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg8 = Gosu::Color(NUM2ULONG(argv[6]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:5423:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+              ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:5546:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg9 = Gosu::Color(NUM2ULONG(argv[7]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6142:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6248:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6263:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg8 = Gosu::Color(NUM2ULONG(argv[6]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6278:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg9 = Gosu::Color(NUM2ULONG(argv[7]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6293:25: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+            ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6428:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+              ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6783:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg4 = Gosu::Color(NUM2ULONG(argv[2]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6808:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6833:25: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+            ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:6858:25: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg13 = Gosu::Color(NUM2ULONG(argv[11]));
+            ~~~~        ^~~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9056:25: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg2 = Gosu::Button(NUM2LONG(argv[0]));
+           ~~~~         ^~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:600:21: note: expanded from macro 'NUM2LONG'
+#define NUM2LONG(x) rb_num2long_inline(x)
+                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9103:25: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg2 = Gosu::Button(NUM2LONG(argv[0]));
+           ~~~~         ^~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:600:21: note: expanded from macro 'NUM2LONG'
+#define NUM2LONG(x) rb_num2long_inline(x)
+                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9173:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg4 = Gosu::Color(NUM2ULONG(argv[2]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9198:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9300:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg4 = Gosu::Color(NUM2ULONG(argv[2]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9325:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9350:25: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+            ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9459:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg4 = Gosu::Color(NUM2ULONG(argv[2]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9484:24: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+           ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9509:25: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+            ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9534:25: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg13 = Gosu::Color(NUM2ULONG(argv[11]));
+            ~~~~        ^~~~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:609:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) rb_num2ulong_inline(x)
+                     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9633:25: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg2 = Gosu::Button(NUM2LONG(argv[0]));
+           ~~~~         ^~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:600:21: note: expanded from macro 'NUM2LONG'
+#define NUM2LONG(x) rb_num2long_inline(x)
+                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+./../GosuImpl/RubyGosu_wrap.cxx:9701:25: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    arg1 = Gosu::Button(NUM2LONG(argv[0]));
+           ~~~~         ^~~~~~~~~~~~~~~~~
+/Users/andrewsinner/.rubies/ruby-2.1.2/include/ruby-2.1.0/ruby/ruby.h:600:21: note: expanded from macro 'NUM2LONG'
+#define NUM2LONG(x) rb_num2long_inline(x)
+                    ^~~~~~~~~~~~~~~~~~~~~
+In file included from RubyGosu_wrap.cxx:1:
+In file included from ./../GosuImpl/RubyGosu_wrap.cxx:2216:
+In file included from ../Gosu/Gosu.hpp:19:
+../Gosu/Image.hpp:117:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+./../GosuImpl/RubyGosu_wrap.cxx:2729:15: note: in instantiation of function template specialization 'Gosu::imagesFromTiledBitmap<std::__1::vector<Gosu::Image *, std::__1::allocator<Gosu::Image *> > >' requested here
+        Gosu::imagesFromTiledBitmap(window.graphics(), bmp,
+              ^
+69 warnings generated.
+compiling AudioOpenAL.cpp
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/ALChannelManagement.hpp:5:
+./../GosuImpl/Audio/../MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/ALChannelManagement.hpp:5:
+./../GosuImpl/Audio/../MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:1:
+./../GosuImpl/Audio/ALChannelManagement.hpp:73:38: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+                if (currentTokens[i] == NO_TOKEN)
+                    ~~~~~~~~~~~~~~~~ ^  ~~~~~~~~
+./../GosuImpl/Audio/ALChannelManagement.hpp:87:70: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'int' [-Wsign-compare]
+            if (channel != NO_FREE_CHANNEL && currentTokens[channel] == token)
+                                              ~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:2:
+In file included from ./../GosuImpl/Audio/OggFile.hpp:4:
+./../GosuImpl/Audio/AudioFile.hpp:39:33: warning: implicit conversion loses integer precision: 'std::size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+                int readBytes = readData(&decodedData_[decodedData_.size() - INCREMENT],
+                    ~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioFile.hpp:41:31: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+                if (readBytes < INCREMENT)
+                    ~~~~~~~~~ ^ ~~~~~~~~~
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:2:
+./../GosuImpl/Audio/OggFile.hpp:42:33: warning: implicit conversion loses integer precision: 'long' to 'ALenum' (aka 'int') [-Wshorten-64-to-32]
+            sampleRate_ = info->rate;
+                        ~ ~~~~~~^~~~
+./../GosuImpl/Audio/OggFile.hpp:90:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                result = ov_read(&file_, ptr + size, length - size,
+                       ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/OggFile.hpp:90:61: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+                result = ov_read(&file_, ptr + size, length - size,
+                         ~~~~~~~                     ~~~~~~~^~~~~~
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:21:
+./../GosuImpl/Audio/AudioToolboxFile.hpp:37:70: warning: implicit conversion loses integer precision: 'unsigned long long' to 'const unsigned int' [-Wshorten-64-to-32]
+            *actualCount = std::min<UInt32>(requestCount, res.size() - inPosition);
+                           ~~~                            ~~~~~~~~~~~^~~~~~~~~~~~
+./../GosuImpl/Audio/AudioToolboxFile.hpp:151:13: warning: 'CFURLGetFSRef' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+            CFURLGetFSRef(reinterpret_cast<CFURLRef>(url.get()), &fsRef);
+            ^
+/System/Library/Frameworks/CoreFoundation.framework/Headers/CFURL.h:475:9: note: 'CFURLGetFSRef' has been explicitly marked deprecated here
+Boolean CFURLGetFSRef(CFURLRef url, struct FSRef *fsRef) CF_DEPRECATED(10_0, 10_9, 2_0, 7_0);
+        ^
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:21:
+./../GosuImpl/Audio/AudioToolboxFile.hpp:154:26: warning: 'ExtAudioFileOpen' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+                CHECK_OS(ExtAudioFileOpen(&fsRef, &file_));
+                         ^
+./../GosuImpl/Audio/../MacUtility.hpp:42:36: note: expanded from macro 'CHECK_OS'
+    #define CHECK_OS(status) if (!(status)) {} else Gosu::throwOSError(status, __LINE__)
+                                   ^
+/System/Library/Frameworks/AudioToolbox.framework/Headers/ExtendedAudioFile.h:317:1: note: 'ExtAudioFileOpen' has been explicitly marked deprecated here
+ExtAudioFileOpen(                       const struct FSRef *            inFSRef,
+^
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:21:
+./../GosuImpl/Audio/AudioToolboxFile.hpp:154:26: warning: 'ExtAudioFileOpen' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+                CHECK_OS(ExtAudioFileOpen(&fsRef, &file_));
+                         ^
+./../GosuImpl/Audio/../MacUtility.hpp:42:72: note: expanded from macro 'CHECK_OS'
+    #define CHECK_OS(status) if (!(status)) {} else Gosu::throwOSError(status, __LINE__)
+                                                                       ^
+/System/Library/Frameworks/AudioToolbox.framework/Headers/ExtendedAudioFile.h:317:1: note: 'ExtAudioFileOpen' has been explicitly marked deprecated here
+ExtAudioFileOpen(                       const struct FSRef *            inFSRef,
+^
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:21:
+./../GosuImpl/Audio/AudioToolboxFile.hpp:212:45: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'UInt32' (aka 'unsigned int') [-Wshorten-64-to-32]
+            abl.mBuffers[0].mDataByteSize = length;
+                                          ~ ^~~~~~
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+./../GosuImpl/Audio/AudioOpenAL.cpp:79:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:89:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:99:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:107:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:118:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:126:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:134:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:143:16: warning: comparison of integers of different signs: 'ALuint' (aka 'unsigned int') and 'Gosu::ALChannelManagement::<anonymous enum at ./../GosuImpl/Audio/ALChannelManagement.hpp:35:9>' [-Wsign-compare]
+    if (source == ALChannelManagement::NO_SOURCE)
+        ~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:158:22: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'ALsizei' (aka 'int') [-Wshorten-64-to-32]
+                     audioFile.decodedData().size(),
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Audio/AudioOpenAL.cpp:355:61: warning: implicit conversion loses integer precision: 'std::size_t' (aka 'unsigned long') to 'ALsizei' (aka 'int') [-Wshorten-64-to-32]
+            alBufferData(buffer, file->format(), audioData, readBytes, file->sampleRate());
+            ~~~~~~~~~~~~                                    ^~~~~~~~~
+In file included from AudioOpenAL.cpp:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.mm:1:
+In file included from ./../GosuImpl/Audio/AudioOpenAL.cpp:21:
+./../GosuImpl/Audio/AudioToolboxFile.hpp:30:16: warning: private field 'bytesPerFrame_' is not used [-Wunused-private-field]
+        UInt32 bytesPerFrame_;
+               ^
+./../GosuImpl/Audio/AudioToolboxFile.hpp:31:14: warning: private field 'bigEndian_' is not used [-Wunused-private-field]
+        bool bigEndian_;
+             ^
+26 warnings generated.
+compiling Bitmap.cpp
+compiling BitmapApple.cpp
+In file included from BitmapApple.cpp:1:
+In file included from ./../GosuImpl/Graphics/BitmapApple.mm:7:
+../GosuImpl/MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from BitmapApple.cpp:1:
+In file included from ./../GosuImpl/Graphics/BitmapApple.mm:7:
+../GosuImpl/MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from BitmapApple.cpp:1:
+./../GosuImpl/Graphics/BitmapApple.mm:24:23: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+        bitmap.resize(CGImageGetWidth(imageRef), CGImageGetHeight(imageRef));
+        ~~~~~~        ^~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/BitmapApple.mm:24:50: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+        bitmap.resize(CGImageGetWidth(imageRef), CGImageGetHeight(imageRef));
+        ~~~~~~                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/BitmapApple.mm:67:28: warning: 'bestRepresentationForDevice:' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+        id anyRep = [image bestRepresentationForDevice:nil];
+                           ^
+/System/Library/Frameworks/AppKit.framework/Headers/NSImage.h:131:1: note: 'bestRepresentationForDevice:' has been explicitly marked deprecated here
+- (NSImageRep *)bestRepresentationForDevice:(NSDictionary *)deviceDescription NS_DEPRECATED_MAC(10_0, 10_6);
+^
+In file included from BitmapApple.cpp:1:
+./../GosuImpl/Graphics/BitmapApple.mm:56:9: warning: unused label 'http' [-Wunused-label]
+        http://stackoverflow.com/questions/2239785/nsimage-color-shift-on-snow-leopard
+        ^~~~~
+./../GosuImpl/Graphics/BitmapApple.mm:72:23: warning: implicit conversion loses integer precision: 'NSInteger' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
+        bitmap.resize([rep pixelsWide], [rep pixelsHigh]);
+        ~~~~~~        ^~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/BitmapApple.mm:72:41: warning: implicit conversion loses integer precision: 'NSInteger' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
+        bitmap.resize([rep pixelsWide], [rep pixelsHigh]);
+        ~~~~~~                          ^~~~~~~~~~~~~~~~
+8 warnings generated.
+compiling BitmapColorKey.cpp
+compiling BitmapUtils.cpp
+compiling BlockAllocator.cpp
+compiling Color.cpp
+In file included from Color.cpp:1:
+./../GosuImpl/Graphics/Color.cpp:114:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    return Color(clamp<int>(round(Gosu::interpolate(a.alpha(), b.alpha(), weight)), 0, 255),
+                 ~~~~~      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/Color.cpp:115:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                 clamp<int>(round(Gosu::interpolate(a.red(),   b.red(),   weight)), 0, 255),
+                 ~~~~~      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/Color.cpp:116:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                 clamp<int>(round(Gosu::interpolate(a.green(), b.green(), weight)), 0, 255),
+                 ~~~~~      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/Color.cpp:117:29: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                 clamp<int>(round(Gosu::interpolate(a.blue(),  b.blue(),  weight)), 0, 255));
+                 ~~~~~      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+compiling DirectoriesUnix.cpp
+compiling FileUnix.cpp
+compiling Font.cpp
+In file included from Font.cpp:1:
+In file included from ./../GosuImpl/Graphics/Font.cpp:3:
+../Gosu/Image.hpp:100:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+../Gosu/Image.hpp:117:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+In file included from Font.cpp:1:
+In file included from ./../GosuImpl/Graphics/Font.cpp:7:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+In file included from Font.cpp:1:
+In file included from ./../GosuImpl/Graphics/Font.cpp:8:
+./../GosuImpl/Graphics/FormattedString.hpp:126:36: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+                    unsigned rgb = wcstoul(html + pos + 3, 0, 16);
+                             ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:135:37: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+                    unsigned argb = wcstoul(html + pos + 3, 0, 16);
+                             ~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:179:41: warning: comparison of integers of different signs: 'int' and 'std::size_t' (aka 'unsigned long') [-Wsign-compare]
+                        if (endOfEntity >= len)
+                            ~~~~~~~~~~~ ^  ~~~
+./../GosuImpl/Graphics/FormattedString.hpp:203:31: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+            for (int i = 0; i < characters.size(); ++i)
+                            ~ ^ ~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:246:32: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+            if (unsigned len = characters.size())
+                         ~~~   ^~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:249:24: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+                return simpleString.length();
+                ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~
+10 warnings generated.
+compiling Graphics.cpp
+In file included from Graphics.cpp:1:
+In file included from ./../GosuImpl/Graphics/Graphics.cpp:2:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+In file included from Graphics.cpp:1:
+In file included from ./../GosuImpl/Graphics/Graphics.cpp:3:
+./../GosuImpl/Graphics/DrawOp.hpp:93:36: warning: comparison of integers of different signs: 'unsigned int' and 'const int' [-Wsign-compare]
+            for (unsigned i = 0; i < verticesOrBlockIndex; i++)
+                                 ~ ^ ~~~~~~~~~~~~~~~~~~~~
+In file included from Graphics.cpp:1:
+In file included from ./../GosuImpl/Graphics/Graphics.cpp:7:
+In file included from ./../GosuImpl/Graphics/Macro.hpp:9:
+In file included from ./../GosuImpl/Graphics/DrawOpQueue.hpp:7:
+./../GosuImpl/Graphics/ClipRectStack.hpp:24:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, end = stack.size(); i < end; ++i)
+                        ~~~   ^~~~~~~~~~~~
+In file included from Graphics.cpp:1:
+In file included from ./../GosuImpl/Graphics/Graphics.cpp:7:
+./../GosuImpl/Graphics/Macro.hpp:186:39: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'GLsizei' (aka 'int') [-Wshorten-64-to-32]
+            glDrawArrays(GL_QUADS, 0, it->vertices.size());
+            ~~~~~~~~~~~~              ^~~~~~~~~~~~~~~~~~~
+In file included from Graphics.cpp:1:
+In file included from ./../GosuImpl/Graphics/Graphics.cpp:9:
+../Gosu/Image.hpp:100:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+../Gosu/Image.hpp:117:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+7 warnings generated.
+compiling Image.cpp
+In file included from Image.cpp:1:
+In file included from ./../GosuImpl/Graphics/Image.cpp:1:
+../Gosu/Image.hpp:100:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+../Gosu/Image.hpp:117:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+2 warnings generated.
+compiling InputMac.cpp
+In file included from InputMac.cpp:1:
+In file included from ./../GosuImpl/InputMac.mm:5:
+../GosuImpl/MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from InputMac.cpp:1:
+In file included from ./../GosuImpl/InputMac.mm:5:
+../GosuImpl/MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from InputMac.cpp:1:
+./../GosuImpl/InputMac.mm:77:19: warning: variable 'value' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        checkTrue(number && CFNumberGetValue(number, kCFNumberSInt32Type, &value),
+                  ^~~~~~
+./../GosuImpl/InputMac.mm:79:16: note: uninitialized use occurs here
+        return value;
+               ^~~~~
+./../GosuImpl/InputMac.mm:77:19: note: remove the '&&' if its condition is always true
+        checkTrue(number && CFNumberGetValue(number, kCFNumberSInt32Type, &value),
+                  ^~~~~~~~~
+./../GosuImpl/InputMac.mm:74:21: note: initialize the variable 'value' to silence this warning
+        SInt32 value;
+                    ^
+                     = 0
+./../GosuImpl/InputMac.mm:321:53: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+            std::tr1::array<bool, gpNum> result = { false };
+                                                    ^~~~~
+                                                    {    }
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include/stdbool.h:38:15: note: expanded from macro 'false'
+#define false false
+              ^~~~~
+In file included from InputMac.cpp:1:
+./../GosuImpl/InputMac.mm:324:35: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+            for (int dev = 0; dev < devices.size() && dev < numGamepads; ++dev)
+                              ~~~ ^ ~~~~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:324:59: warning: comparison of integers of different signs: 'int' and 'Gosu::ButtonName' [-Wsign-compare]
+            for (int dev = 0; dev < devices.size() && dev < numGamepads; ++dev)
+                                                      ~~~ ^ ~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:333:37: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+                for (int ax = 0; ax < devices[dev].axis.size(); ++ax)
+                                 ~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:356:39: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+                for (int hat = 0; hat < devices[dev].hats.size(); ++hat)
+                                  ~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:404:39: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+                for (int btn = 0; btn < devices[dev].buttons.size() && btn < 16; ++btn)
+                                  ~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:416:43: warning: comparison of integers of different signs: 'int' and 'Gosu::ButtonName' [-Wsign-compare]
+                for (int index = 0; index < gpNumPerGamepad; ++index)
+                                    ~~~~~ ^ ~~~~~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:428:56: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    std::tr1::array<wchar_t, numScancodes> idChars = { 0 };
+                                                       ^
+                                                       {}
+./../GosuImpl/InputMac.mm:475:62: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    std::tr1::array<bool, Gosu::numButtons> buttonStates = { false };
+                                                             ^~~~~
+                                                             {    }
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include/stdbool.h:38:15: note: expanded from macro 'false'
+#define false false
+              ^~~~~
+In file included from InputMac.cpp:1:
+./../GosuImpl/InputMac.mm:553:21: warning: implicit conversion loses integer precision: 'NSEventType' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned type = [ev type];
+             ~~~~   ^~~~~~~~~
+./../GosuImpl/InputMac.mm:562:21: warning: implicit conversion loses integer precision: 'NSUInteger' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned mods = [ev modifierFlags];
+             ~~~~   ^~~~~~~~~~~~~~~~~~
+./../GosuImpl/InputMac.mm:584:57: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+            pimpl->enqueue(msOther0 + [ev buttonNumber] - 2, true);
+            ~~~~~          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/InputMac.mm:589:57: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+            pimpl->enqueue(msOther0 + [ev buttonNumber] - 2, false);
+            ~~~~~          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./../GosuImpl/InputMac.mm:661:5: warning: 'CGSetLocalEventsSuppressionInterval' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+    CGSetLocalEventsSuppressionInterval(0.0);
+    ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGRemoteOperation.h:374:19: note: 'CGSetLocalEventsSuppressionInterval' has been explicitly marked deprecated here
+CG_EXTERN CGError CGSetLocalEventsSuppressionInterval(CFTimeInterval seconds)
+                  ^
+17 warnings generated.
+compiling Inspection.cpp
+In file included from Inspection.cpp:1:
+./../GosuImpl/Inspection.cpp:13:47: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+            int newSec = Gosu::milliseconds() / 1000;
+                ~~~~~~   ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+1 warning generated.
+compiling IO.cpp
+compiling LargeImageData.cpp
+In file included from LargeImageData.cpp:1:
+In file included from ./../GosuImpl/Graphics/LargeImageData.cpp:2:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+In file included from LargeImageData.cpp:1:
+./../GosuImpl/Graphics/LargeImageData.cpp:15:14: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    partsX = trunc(ceil(1.0 * source.width() / partWidth));
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/LargeImageData.cpp:16:14: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    partsY = trunc(ceil(1.0 * source.height() / partHeight));
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/LargeImageData.cpp:123:23: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+    for (int x = 0; x < partsX; ++x)
+                    ~ ^ ~~~~~~
+./../GosuImpl/Graphics/LargeImageData.cpp:124:27: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+        for (int y = 0; y < partsY; ++y)
+                        ~ ^ ~~~~~~
+./../GosuImpl/Graphics/LargeImageData.cpp:131:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int x = 0; x < partsX; ++x)
+                    ~ ^ ~~~~~~
+./../GosuImpl/Graphics/LargeImageData.cpp:132:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < partsY; ++y)
+                        ~ ^ ~~~~~~
+8 warnings generated.
+compiling Math.cpp
+compiling TexChunk.cpp
+In file included from TexChunk.cpp:1:
+In file included from ./../GosuImpl/Graphics/TexChunk.cpp:1:
+In file included from ./../GosuImpl/Graphics/TexChunk.hpp:7:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+In file included from TexChunk.cpp:1:
+In file included from ./../GosuImpl/Graphics/TexChunk.cpp:3:
+In file included from ./../GosuImpl/Graphics/DrawOpQueue.hpp:7:
+./../GosuImpl/Graphics/ClipRectStack.hpp:24:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, end = stack.size(); i < end; ++i)
+                        ~~~   ^~~~~~~~~~~~
+In file included from TexChunk.cpp:1:
+In file included from ./../GosuImpl/Graphics/TexChunk.cpp:3:
+In file included from ./../GosuImpl/Graphics/DrawOpQueue.hpp:8:
+./../GosuImpl/Graphics/DrawOp.hpp:93:36: warning: comparison of integers of different signs: 'unsigned int' and 'const int' [-Wsign-compare]
+            for (unsigned i = 0; i < verticesOrBlockIndex; i++)
+                                 ~ ^ ~~~~~~~~~~~~~~~~~~~~
+In file included from TexChunk.cpp:1:
+./../GosuImpl/Graphics/TexChunk.cpp:90:48: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+    if (x < 0 || y < 0 || x + original.width() > w || y + original.height() > h)
+                          ~~~~~~~~~~~~~~~~~~~~ ^ ~
+./../GosuImpl/Graphics/TexChunk.cpp:90:77: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+    if (x < 0 || y < 0 || x + original.width() > w || y + original.height() > h)
+                                                      ~~~~~~~~~~~~~~~~~~~~~ ^ ~
+6 warnings generated.
+compiling Text.cpp
+In file included from Text.cpp:1:
+In file included from ./../GosuImpl/Graphics/Text.cpp:4:
+../Gosu/Image.hpp:100:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+../Gosu/Image.hpp:117:31: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        for (int i = 0, num = tiles.size(); i < num; ++i)
+                        ~~~   ^~~~~~~~~~~~
+In file included from Text.cpp:1:
+In file included from ./../GosuImpl/Graphics/Text.cpp:8:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+In file included from Text.cpp:1:
+In file included from ./../GosuImpl/Graphics/Text.cpp:9:
+./../GosuImpl/Graphics/FormattedString.hpp:126:36: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+                    unsigned rgb = wcstoul(html + pos + 3, 0, 16);
+                             ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:135:37: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+                    unsigned argb = wcstoul(html + pos + 3, 0, 16);
+                             ~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:179:41: warning: comparison of integers of different signs: 'int' and 'std::size_t' (aka 'unsigned long') [-Wsign-compare]
+                        if (endOfEntity >= len)
+                            ~~~~~~~~~~~ ^  ~~~
+./../GosuImpl/Graphics/FormattedString.hpp:203:31: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+            for (int i = 0; i < characters.size(); ++i)
+                            ~ ^ ~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:246:32: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+            if (unsigned len = characters.size())
+                         ~~~   ^~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/FormattedString.hpp:249:24: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+                return simpleString.length();
+                ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~
+In file included from Text.cpp:1:
+./../GosuImpl/Graphics/Text.cpp:116:34: warning: implicit conversion loses integer precision: 'typename __wrap_iter<const WordInfo *>::difference_type' (aka 'long') to 'unsigned int' [-Wshorten-64-to-32]
+                unsigned words = end - begin;
+                         ~~~~~   ^~~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:150:39: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+                    for (int i = 0; i < parts.size(); ++i)
+                                    ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:158:59: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                            bmp.insert(entity, trunc(pos) + x, trunc(top));
+                            ~~~                ~~~~~~~~~~~^~~
+./../GosuImpl/Graphics/Text.cpp:158:64: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                            bmp.insert(entity, trunc(pos) + x, trunc(top));
+                            ~~~                                ^~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:164:67: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                        drawText(bmp, unformattedPart, trunc(pos) + x, trunc(top),
+                        ~~~~~~~~                       ~~~~~~~~~~~^~~
+./../GosuImpl/Graphics/Text.cpp:164:72: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                        drawText(bmp, unformattedPart, trunc(pos) + x, trunc(top),
+                        ~~~~~~~~                                       ^~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:296:31: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+            for (int i = 0; i < paragraphs.size(); ++i)
+                            ~ ^ ~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:334:32: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+    Bitmap bmp(1, lines.size() * fontHeight);
+           ~~~    ~~~~~~~~~~~~~^~~~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:336:23: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+    for (int i = 0; i < lines.size(); ++i)
+                    ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Text.cpp:343:27: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int p = 0; p < parts.size(); ++p)
+                        ~ ^ ~~~~~~~~~~~~
+20 warnings generated.
+compiling TextInputMac.cpp
+In file included from TextInputMac.cpp:1:
+In file included from ./../GosuImpl/TextInputMac.mm:3:
+../GosuImpl/MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from TextInputMac.cpp:1:
+In file included from ./../GosuImpl/TextInputMac.mm:3:
+../GosuImpl/MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from TextInputMac.cpp:1:
+./../GosuImpl/TextInputMac.mm:72:17: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    CARET_POS = _text->length();
+              ~ ^~~~~~~~~~~~~~~
+./../GosuImpl/TextInputMac.mm:143:17: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    CARET_POS = _text->length();
+              ~ ^~~~~~~~~~~~~~~
+./../GosuImpl/TextInputMac.mm:188:44: warning: implicit conversion loses integer precision: 'size_type' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+        pimpl->caretPos = pimpl->selectionStart = text.length();
+                                                ~ ^~~~~~~~~~~~~
+5 warnings generated.
+compiling TextMac.cpp
+compiling TextTouch.cpp
+In file included from TextTouch.cpp:1:
+In file included from ./../GosuImpl/Graphics/TextTouch.mm:9:
+./../GosuImpl/Graphics/../MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from TextTouch.cpp:1:
+In file included from ./../GosuImpl/Graphics/TextTouch.mm:9:
+./../GosuImpl/Graphics/../MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from TextTouch.cpp:1:
+./../GosuImpl/Graphics/TextTouch.mm:171:22: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned width = round(size.width / size.height * fontHeight);
+             ~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling Texture.cpp
+In file included from Texture.cpp:1:
+In file included from ./../GosuImpl/Graphics/Texture.cpp:2:
+In file included from ./../GosuImpl/Graphics/Texture.hpp:7:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+2 warnings generated.
+compiling TimingApple.cpp
+compiling Transform.cpp
+In file included from Transform.cpp:1:
+In file included from ./../GosuImpl/Graphics/Transform.cpp:6:
+./../GosuImpl/Graphics/Common.hpp:113:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int y = 0; y < bmp.height(); ++y)
+                        ~ ^ ~~~~~~~~~~~~
+./../GosuImpl/Graphics/Common.hpp:114:31: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+            for (int x = 0; x < bmp.width(); ++x)
+                            ~ ^ ~~~~~~~~~~~
+In file included from Transform.cpp:1:
+./../GosuImpl/Graphics/Transform.cpp:15:9: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        +c, +s, 0, 0,
+        ^~~~~~~~~~~~~
+./../GosuImpl/Graphics/Transform.cpp:29:9: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        1, 0, 0, 0,
+        ^~~~~~~~~~~
+./../GosuImpl/Graphics/Transform.cpp:41:9: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        factor, 0,      0, 0,
+        ^~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/Graphics/Transform.cpp:53:9: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        factorX, 0,       0, 0,
+        ^~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated.
+compiling Utility.cpp
+compiling UtilityApple.cpp
+In file included from UtilityApple.cpp:1:
+In file included from ./../GosuImpl/UtilityApple.mm:3:
+../GosuImpl/MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from UtilityApple.cpp:1:
+In file included from ./../GosuImpl/UtilityApple.mm:3:
+../GosuImpl/MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+2 warnings generated.
+compiling WindowMac.cpp
+In file included from WindowMac.cpp:1:
+In file included from ./../GosuImpl/WindowMac.mm:5:
+../GosuImpl/MacUtility.hpp:36:16: warning: 'GetMacOSStatusErrorString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << GetMacOSStatusErrorString(status)
+               ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:807:1: note: 'GetMacOSStatusErrorString' has been explicitly marked deprecated here
+GetMacOSStatusErrorString(OSStatus err)                       __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from WindowMac.cpp:1:
+In file included from ./../GosuImpl/WindowMac.mm:5:
+../GosuImpl/MacUtility.hpp:37:24: warning: 'GetMacOSStatusCommentString' is deprecated: first deprecated in OS X 10.8 [-Wdeprecated-declarations]
+            << " (" << GetMacOSStatusCommentString(status) << ")";
+                       ^
+/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Debugging.h:848:1: note: 'GetMacOSStatusCommentString' has been explicitly marked deprecated here
+GetMacOSStatusCommentString(OSStatus err)                     __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_4, __MAC_10_8, __IPHONE_NA, __IPHONE_NA);
+^
+In file included from WindowMac.cpp:1:
+./../GosuImpl/WindowMac.mm:310:28: warning: 'CGDisplayCurrentMode' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+        pimpl->savedMode = CGDisplayCurrentMode(kCGDirectMainDisplay);
+                           ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:455:27: note: 'CGDisplayCurrentMode' has been explicitly marked deprecated here
+CG_EXTERN CFDictionaryRef CGDisplayCurrentMode(CGDirectDisplayID display)
+                          ^
+In file included from WindowMac.cpp:1:
+./../GosuImpl/WindowMac.mm:316:13: warning: 'CGDisplayBestModeForParameters' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+            CGDisplayBestModeForParameters(kCGDirectMainDisplay, bpp, width, height, 0);
+            ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:442:27: note: 'CGDisplayBestModeForParameters' has been explicitly marked deprecated here
+CG_EXTERN CFDictionaryRef CGDisplayBestModeForParameters(CGDirectDisplayID
+                          ^
+In file included from WindowMac.cpp:1:
+./../GosuImpl/WindowMac.mm:346:9: warning: multiple methods named 'setInput:' found
+        [NSApp setInput:input()];
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/WindowMac.mm:73:1: note: using
+- (void)setInput:(Gosu::Input&)ipt;
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/WindowMac.mm:160:1: note: also found
+- (void)setInput:(Gosu::Input *)input
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./../GosuImpl/WindowMac.mm:370:9: warning: 'CGDisplaySwitchToMode' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+        CGDisplaySwitchToMode(kCGDirectMainDisplay, pimpl->savedMode);
+        ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:460:19: note: 'CGDisplaySwitchToMode' has been explicitly marked deprecated here
+CG_EXTERN CGError CGDisplaySwitchToMode(CGDirectDisplayID display,
+                  ^
+In file included from WindowMac.cpp:1:
+./../GosuImpl/WindowMac.mm:405:5: warning: 'SetFrontProcess' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+    SetFrontProcess(&psn);
+    ^
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Processes.h:603:1: note: 'SetFrontProcess' has been explicitly marked deprecated here
+SetFrontProcess(const ProcessSerialNumber * PSN)              AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER_BUT_DEPRECATED_IN_MAC_OS_X_VERSION_10_9;
+^
+In file included from WindowMac.cpp:1:
+./../GosuImpl/WindowMac.mm:413:17: warning: 'CGDisplaySwitchToMode' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+        cgCheck(CGDisplaySwitchToMode(kCGDirectMainDisplay, pimpl->newMode), "switching mode");
+                ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:460:19: note: 'CGDisplaySwitchToMode' has been explicitly marked deprecated here
+CG_EXTERN CGError CGDisplaySwitchToMode(CGDirectDisplayID display,
+                  ^
+In file included from WindowMac.cpp:1:
+./../GosuImpl/WindowMac.mm:431:9: warning: 'CGDisplaySwitchToMode' is deprecated: first deprecated in OS X 10.6 [-Wdeprecated-declarations]
+        CGDisplaySwitchToMode(kCGDirectMainDisplay, pimpl->savedMode);
+        ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:460:19: note: 'CGDisplaySwitchToMode' has been explicitly marked deprecated here
+CG_EXTERN CGError CGDisplaySwitchToMode(CGDirectDisplayID display,
+                  ^
+9 warnings generated.
+linking shared-object gosu.bundle
+ld: warning: directory not found for option '-L/usr/local/Cellar/gdbm/1.11/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/gdbm/1.11/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/gdbm/1.11/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gosu.bundle ./.gem.20140924-77647-1ll8icg
+installing default gosu libraries
