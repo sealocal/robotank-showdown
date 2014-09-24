@@ -1,6 +1,6 @@
 require 'rrobots'
 
-class Bmf
+class Bamf
   include Robot
 
   @@detected_values = []
