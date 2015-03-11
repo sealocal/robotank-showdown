@@ -1,26 +1,20 @@
-Basic Repo for RoboTank Showdown!
-==================================
-    # Fork this repo, so you can submit your tank via PR
+#Basic Repo for RoboTank Showdown!
+1. Fork this repo, so you can submit your tank via PR.
+1. Clone your fork.
+1. Then install the project dependencies:
+  - The Gosu library requires some system prep:
+    - RVM users: Beware!
+    - OSX users: https://github.com/jlnr/gosu/wiki/Getting-Started-on-OS-X
+    - Linux users: https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
+  - Now you can install the gems
+    - `$ gem install gosu`
+    - `$ bundle install`
 
-    # Clone your fork. Then install the project dependencies
-    $ bundle install
+1. Run the sample robots:
+  - `$ bundle exec rrobots Killa Duck`
 
-    # Run the sample robots
-    $ bundle exec rrobots Killa Duck
 
-    # Now go make your own!
-
-Possible Install Issues
-=======================
-
-If you have a problem installing the GOSU library, there's a helpful
-error message which links to this:
-
-https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
-
-You may need to install a few packages
-
-### Useful resources: ###
+## Useful resources
 
 http://rubydoc.info/gems/rrobots/0.0.1/frames
 
@@ -28,7 +22,7 @@ https://github.com/ralreegorganon/rrobots
 
 http://rubyforge.org/forum/?group_id=1109
 
-### Some methods...: ###
+## RoboTank Battle API methods
     battlefield_height  #the height of the battlefield
     battlefield_width   #the width of the battlefield
     energy              #your remaining energy (if this drops below 0 you are dead)
