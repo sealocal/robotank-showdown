@@ -1,9 +1,10 @@
 require 'rrobots'
 
+# Fast and furious
 class Killa
   include Robot
 
-  def tick events
+  def tick(events)
     turn_radar 1 if time == 0
     turn_gun 30 if time < 3
     accelerate 1
